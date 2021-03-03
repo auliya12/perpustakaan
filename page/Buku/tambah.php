@@ -95,12 +95,16 @@
     if ($simpan){
 
         $sql = $koneksi -> query("insert into tb_buku (judul, pengarang, penerbit, tahun_terbit, isbn, jumlah_buku, lokasi, tgl_input)values('$judul','$pengarang','$penerbit','$tahun','$isbn', ' $jumlah', ' $lokasi', '$tanggal')");
+
         if ($sql){
             ?>
 
-            <script type="text/javascript">
-            alert ("Data Berhasil Disimpan");
-            window.location.href="?page=buku";
+                <script type="text/javascript">
+
+                  alert ("Data Berhasil Disimpan");
+                  window.location.href="?page=buku";
+
+                </script>
             <?php
         }
     }

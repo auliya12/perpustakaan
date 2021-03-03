@@ -1,4 +1,6 @@
 <?php
+    
+    include "function.php";
 
     $koneksi = new mysqli ("localhost","root","","db_perpustakaan");
 ?>
@@ -87,14 +89,30 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="login.html" class="
                                     include "page/buku/buku.php";
                             }elseif ($aksi == "tambah"){
                                      include "page/buku/tambah.php";
-                            }
+                            }elseif ($aksi == "ubah"){
+                                     include "page/buku/ubah.php";
+                                 }elseif ($aksi == "hapus"){
+                                     include "page/buku/hapus.php";
+                                 }
                         }elseif ($page == "anggota"){
                                 if ($aksi == ""){
                                     include "page/anggota/anggota.php";
+                            }elseif ($aksi == "tambah"){
+                                    include "page/anggota/tambah.php";
+                            }elseif ($aksi == "ubah"){
+                                    include "page/anggota/ubah.php";
+                            }elseif ($aksi == "hapus"){
+                                    include "page/anggota/hapus.php";
                             }
                         }elseif ($page == "transaksi"){
                                 if ($aksi == ""){
                                     include "page/transaksi/transaksi.php";
+                            }elseif ($aksi == "tambah"){
+                                    include "page/transaksi/tambah.php";
+                                }elseif ($aksi == "kembali"){
+                                    include "page/transaksi/kembali.php";
+                                }elseif ($aksi == "perpanjang"){
+                                    include "page/transaksi/perpanjang.php";
                                 }
                             }
                         
@@ -134,7 +152,8 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="login.html" class="
          <!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
     
+       
     
-   
-</body>
-</html>
+
+    </body>
+    </html>

@@ -13,7 +13,7 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Judul</th>
-                                            <th>Platform(s)</th>
+                                            <th>Pengarang</th>
                                             <th>Penerbit</th>
                                             <th>ISBN</th>
                                             <th>Jumlah Buku</th>
@@ -41,8 +41,8 @@
                                             <td><?php echo $data['jumlah_buku'];?></td>
                                             <td>
                                         
-                                                <a href="" class="btn btn-info">Ubah</a>
-                                                 <a href="" class="btn btn-danger">Hapus</a>
+                                                <a href="?page=buku&aksi=ubah&id=<?php echo $data['id']; ?>" class="btn btn-info">Ubah</a>
+                                                 <a onclick="return confirm('Apakah Anda Yakin Akan Menghapus Data Ini?')" href="?page=buku&aksi=hapus&id=<?php echo $data['id']; ?>" class="btn btn-danger" >Hapus</a>
                                             
                                             </td>
                                           
